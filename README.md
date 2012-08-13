@@ -8,7 +8,7 @@ All files work independently, so just include the ones you want.
 
 This plugin requires configuration/customization:
 
-* Edit samwise-branding.php with your brandin
+* Edit samwise-branding.php with your branding
 * Replace samwise-branding/login-logo.png with your own file
 
 
