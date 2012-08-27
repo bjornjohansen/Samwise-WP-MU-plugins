@@ -9,4 +9,4 @@ class Samwise_Html5shiv {
 	}
 }
 
-add_action( 'print_head_scripts', array( 'Samwise_Html5shiv', 'print_script_include' ) );
+add_action( 'wp_print_scripts', array( 'Samwise_Html5shiv', 'print_script_include' ) );
