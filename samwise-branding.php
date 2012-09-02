@@ -5,6 +5,11 @@ add_filter( 'admin_footer_text', create_function( false, "return __('WordPress d
 
 /* Login logo */
 function samwise_custom_login_logo() {
+
+	if ( ! file_exists( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'samwise-branding' . DIRECTORY_SEPARATOR . 'login-logo.png' ) ) {
+		return;
+	}
+
 	$size = getimagesize( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'samwise-branding' . DIRECTORY_SEPARATOR . 'login-logo.png');
 	?><style type="text/css">
 		.login h1 a {
