@@ -3,7 +3,7 @@
 
 function samwise_attachment_image_add_orientation_class( $attr, $attachment ) {
 
-	$protocol = ( ! strlen($_SERVER['HTTPS']) || 'off' == $_SERVER['HTTPS'] ) ? 'http' : 'https'; 
+	$protocol = ( ! isset( $_SERVER['HTTPS'] ) || 'off' == $_SERVER['HTTPS'] ) ? 'http' : 'https'; 
 	
 	//$size = getimagesize( ABSPATH . substr( $attr['src'], strlen( get_option( 'siteurl', $protocol . '://' . $_SERVER['HTTP_HOST'] . '/' ) ) + 1 ) );
 	
