@@ -44,9 +44,9 @@ function samwise_clean_plugins( $content ) {
 }
 
 // only use clean urls if the theme isn't a child or an MU (Network) install
-$theme_data = get_theme_data( trailingslashit( get_stylesheet_directory() ) . 'style.css');
+$theme_data = wp_get_theme();
 
-if ((!defined('WP_ALLOW_MULTISITE') || (defined('WP_ALLOW_MULTISITE') && WP_ALLOW_MULTISITE !== true)) && $theme_data['Template'] === '') {
+if ((!defined('WP_ALLOW_MULTISITE') || (defined('WP_ALLOW_MULTISITE') && WP_ALLOW_MULTISITE !== true)) && $theme_data->Template === '') {
   add_action('generate_rewrite_rules', 'samwise_add_rewrites');
   add_filter('plugins_url', 'samwise_clean_plugins');
   add_filter('bloginfo', 'samwise_clean_assets');
